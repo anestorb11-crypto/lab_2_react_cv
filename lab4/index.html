@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="uk" id="html-root">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Нестор Андрій — Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<button id="theme-btn">☾ Нічна</button>
+
+<div class="page">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div>
+      <div class="sidebar-name">Нестор<br>Андрій</div>
+      <div class="sidebar-role">Junior System Administrator<br>Junior Cybersecurity Specialist</div>
+    </div>
+
+    <div class="sidebar-divider"></div>
+
+    <div class="sidebar-section">
+      <h3>Контакти</h3>
+      <div class="contact-item">
+        <span class="contact-label">Телефон</span>
+        <span class="contact-value">+380 99 735 1660</span>
+      </div>
+      <div class="contact-item">
+        <span class="contact-label">Email</span>
+        <span class="contact-value"><a href="mailto:andrii.neestor@gmail.com">andrii.neestor@gmail.com</a></span>
+      </div>
+      <div class="contact-item">
+        <span class="contact-label">Місто</span>
+        <span class="contact-value">Lviv, Ukraine</span>
+      </div>
+      <div class="contact-item">
+        <span class="contact-label">Портфоліо</span>
+        <span class="contact-value"><a href="https://www.credly.com" target="_blank">Credly Profile ↗</a></span>
+      </div>
+    </div>
+
+    <div class="sidebar-divider"></div>
+
+    <div class="sidebar-section">
+      <h3>Технічні навички</h3>
+      <span class="skill-tag">Windows</span>
+      <span class="skill-tag">Linux</span>
+      <span class="skill-tag">IP / TCP / UDP</span>
+      <span class="skill-tag">Cisco Packet Tracer</span>
+      <span class="skill-tag">Антивірусний захист</span>
+      <span class="skill-tag">Network Hardening</span>
+      <span class="skill-tag">System Protection</span>
+    </div>
+
+    <div class="sidebar-section">
+      <h3>Soft Skills</h3>
+      <span class="skill-tag">Командна робота</span>
+      <span class="skill-tag">Стресостійкість</span>
+      <span class="skill-tag">Увага до деталей</span>
+      <span class="skill-tag">Швидке навчання</span>
+      <span class="skill-tag">Комунікабельність</span>
+    </div>
+
+    <div class="sidebar-divider"></div>
+
+    <div class="sidebar-section">
+      <h3>Сертифікати</h3>
+      <div class="cert-item">Junior Cybersecurity Analyst Career Path — 2025</div>
+      <div class="cert-item">Cloud Security</div>
+      <div class="cert-item">Application Security</div>
+      <div class="cert-item">Cyber Threat Management</div>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <div style="display:flex;flex-direction:column;">
+    <main class="main">
+
+      <section>
+        <div class="section-label">Про мене</div>
+        <p class="about-text">Студент напряму Кібербезпека та захист інформації з практичним досвідом адміністрування мереж і системного захисту. Прагну розвивати навички в галузі інформаційної безпеки, мережевих технологій та системного адміністрування, застосовуючи аналітичне мислення для вирішення реальних задач.</p>
+      </section>
+
+      <section>
+        <div class="section-label">Освіта</div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div>
+              <div class="timeline-title">Національний університет "Львівська політехніка"</div>
+              <div class="timeline-sub">Бакалавр — Кібербезпека та захист інформації</div>
+            </div>
+            <div class="timeline-date">2023 – 2027</div>
+          </div>
+          <div class="timeline-item">
+            <div>
+              <div class="timeline-title">Хотинський фаховий коледж</div>
+              <div class="timeline-sub">Молодший спеціаліст — Облік і оподаткування</div>
+            </div>
+            <div class="timeline-date">2020 – 2023</div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-label">Проєкти та досвід</div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div>
+              <div class="timeline-title">Курсовий проєкт</div>
+              <div class="timeline-sub">Web-розробка / БД</div>
+            </div>
+            <div class="timeline-date">2024</div>
+            <div class="timeline-desc">Розробка веб-сайту для сервісу ремонту комп'ютерів з інтеграцією бази даних. Проєктування структури БД та взаємодії з інтерфейсом.</div>
+          </div>
+          <div class="timeline-item">
+            <div>
+              <div class="timeline-title">Навчальні мережеві проєкти</div>
+              <div class="timeline-sub">Cisco Packet Tracer</div>
+            </div>
+            <div class="timeline-date">2023 – 2024</div>
+            <div class="timeline-desc">Конфігурація мережевої інфраструктури (маршрутизація, комутація) у Cisco Packet Tracer.</div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-label">Відгуки</div>
+        <p id="reviews-loading" style="color:var(--muted);font-size:13px;">Завантаження відгуків…</p>
+        <div id="reviews-list"></div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="footer-title">Системна інформація</div>
+      <div class="sys-grid" id="sys-info"></div>
+    </footer>
+  </div>
+
+</div>
+
+<!-- MODAL -->
+<div id="modal-overlay">
+  <div id="modal">
+    <button id="modal-close" aria-label="Закрити">✕</button>
+    <h3>Зворотній зв'язок</h3>
+    <form action="https://formspree.io/f/xbdppjyj" method="POST" id="contact-form">
+      <div class="form-group">
+        <label>Ім'я</label>
+        <input type="text" name="name" placeholder="Іван Петренко" required />
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" name="email" placeholder="ivan@example.com" required />
+      </div>
+      <div class="form-group">
+        <label>Телефон</label>
+        <input type="tel" name="phone" placeholder="+380 XX XXX XXXX" />
+      </div>
+      <div class="form-group">
+        <label>Повідомлення</label>
+        <textarea name="message" placeholder="Ваше повідомлення…" required></textarea>
+      </div>
+      <button type="submit" class="btn-submit">Відправити</button>
+    </form>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

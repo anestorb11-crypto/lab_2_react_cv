@@ -1,17 +1,36 @@
 function Experience() {
   return (
-    <section>
-      <h2>Projects & Experience</h2>
-      <ul>
-        <li>
-          <strong>Курсовий проєкт | 2025:</strong> Розробка веб-сайту для сервісу ремонту комп’ютерів з інтеграцією бази даних. Проєктування структури БД та забезпечення взаємодії з інтерфейсом.
-        </li>
-        <li>
-          <strong>Навчальні мережеві проєкти | 2024–2025:</strong> Конфігурація мережевої інфраструктури (маршрутизація, комутація) у Cisco Packet Tracer.
-        </li>
-      </ul>
+    <section className="bg-white text-slate-800 p-6 rounded-2xl shadow-lg hover:shadow-2xl transition">
+
+      <h2 className="text-2xl font-bold mb-4 border-l-4 border-cyan-500 pl-2">
+        Досвід та проєкти
+      </h2>
+
+      <div className="space-y-4">
+
+        <div className="p-4 border rounded-xl hover:bg-slate-50 transition">
+          <h3 className="font-semibold text-lg">
+            Курсовий проєкт
+          </h3>
+          <p>
+            Розробка веб-сайту з інтеграцією бази даних.
+            Проєктування структури БД та взаємодії з інтерфейсом.
+          </p>
+        </div>
+
+        <div className="p-4 border rounded-xl hover:bg-slate-50 transition">
+          <h3 className="font-semibold text-lg">
+            Мережеві проєкти
+          </h3>
+          <p>
+            Конфігурація мереж у Cisco Packet Tracer
+            (маршрутизація, комутація).
+          </p>
+        </div>
+
+      </div>
     </section>
-  );
+  )
 }
 
-export default Experience;
+export default Experience
