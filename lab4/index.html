@@ -11,13 +11,26 @@
 
 <button id="theme-btn">☾ Нічна</button>
 
+<!-- ГЛІТЧ ХЕДЕР -->
+<header class="hero" id="hero">
+  <div class="hero-inner">
+    <div class="glitch-wrap">
+      <h1 class="glitch" data-text="НЕСТОР АНДРІЙ">НЕСТОР АНДРІЙ</h1>
+    </div>
+    <p class="hero-role"><span id="typewriter"></span><span class="cursor-blink">|</span></p>
+    <div class="hero-stats">
+      
+    <div class="hero-scroll">↓ scroll</div>
+  </div>
+</header>
+
 <div class="page">
 
   <!-- SIDEBAR -->
   <aside class="sidebar">
     <div>
       <div class="sidebar-name">Нестор<br>Андрій</div>
-      <div class="sidebar-role">Junior System Administrator<br>Junior Cybersecurity Specialist</div>
+      <div class="sidebar-role-sm">Junior Sys Admin / Cybersec</div>
     </div>
 
     <div class="sidebar-divider"></div>
@@ -46,22 +59,20 @@
 
     <div class="sidebar-section">
       <h3>Технічні навички</h3>
-      <span class="skill-tag">Windows</span>
-      <span class="skill-tag">Linux</span>
-      <span class="skill-tag">IP / TCP / UDP</span>
-      <span class="skill-tag">Cisco Packet Tracer</span>
-      <span class="skill-tag">Антивірусний захист</span>
-      <span class="skill-tag">Network Hardening</span>
-      <span class="skill-tag">System Protection</span>
+      <div class="skill-list-item">Windows</div>
+      <div class="skill-list-item">Linux</div>
+      <div class="skill-list-item">IP / TCP / UDP</div>
+      <div class="skill-list-item">Cisco Packet Tracer</div>
+      <div class="skill-list-item">Network Hardening</div>
+      <div class="skill-list-item">System Protection</div>
     </div>
 
     <div class="sidebar-section">
       <h3>Soft Skills</h3>
-      <span class="skill-tag">Командна робота</span>
-      <span class="skill-tag">Стресостійкість</span>
-      <span class="skill-tag">Увага до деталей</span>
-      <span class="skill-tag">Швидке навчання</span>
-      <span class="skill-tag">Комунікабельність</span>
+      <div class="skill-list-item">Командна робота</div>
+      <div class="skill-list-item">Комунікабельність</div>
+      <div class="skill-list-item">Увага до деталей</div>
+      <div class="skill-list-item">Швидке навчання</div>
     </div>
 
     <div class="sidebar-divider"></div>
@@ -73,6 +84,11 @@
       <div class="cert-item">Application Security</div>
       <div class="cert-item">Cyber Threat Management</div>
     </div>
+
+    <div class="sidebar-section">
+      <h3>3D Візуалізація</h3>
+      <canvas id="sphere-canvas" width="200" height="200"></canvas>
+    </div>
   </aside>
 
   <!-- MAIN CONTENT -->
@@ -81,20 +97,21 @@
 
       <section>
         <div class="section-label">Про мене</div>
-        <p class="about-text">Студент напряму Кібербезпека та захист інформації з практичним досвідом адміністрування мереж і системного захисту. Прагну розвивати навички в галузі інформаційної безпеки, мережевих технологій та системного адміністрування, застосовуючи аналітичне мислення для вирішення реальних задач.</p>
+        <p class="about-text parallax-text">Студент напряму Кібербезпека та захист інформації з практичним досвідом адміністрування мереж і системного захисту. Прагну розвивати навички в галузі інформаційної безпеки, мережевих технологій та системного адміністрування, застосовуючи аналітичне мислення для вирішення реальних задач.</p>
       </section>
 
+      <!-- ТАЙМЛАЙН ОСВІТА -->
       <section>
         <div class="section-label">Освіта</div>
         <div class="timeline">
-          <div class="timeline-item">
+          <div class="timeline-item tl-animate">
             <div>
               <div class="timeline-title">Національний університет "Львівська політехніка"</div>
               <div class="timeline-sub">Бакалавр — Кібербезпека та захист інформації</div>
             </div>
             <div class="timeline-date">2023 – 2027</div>
           </div>
-          <div class="timeline-item">
+          <div class="timeline-item tl-animate">
             <div>
               <div class="timeline-title">Хотинський фаховий коледж</div>
               <div class="timeline-sub">Молодший спеціаліст — Облік і оподаткування</div>
@@ -104,10 +121,11 @@
         </div>
       </section>
 
+      <!-- ТАЙМЛАЙН ДОСВІД -->
       <section>
         <div class="section-label">Проєкти та досвід</div>
         <div class="timeline">
-          <div class="timeline-item">
+          <div class="timeline-item tl-animate">
             <div>
               <div class="timeline-title">Курсовий проєкт</div>
               <div class="timeline-sub">Web-розробка / БД</div>
@@ -115,7 +133,7 @@
             <div class="timeline-date">2024</div>
             <div class="timeline-desc">Розробка веб-сайту для сервісу ремонту комп'ютерів з інтеграцією бази даних. Проєктування структури БД та взаємодії з інтерфейсом.</div>
           </div>
-          <div class="timeline-item">
+          <div class="timeline-item tl-animate">
             <div>
               <div class="timeline-title">Навчальні мережеві проєкти</div>
               <div class="timeline-sub">Cisco Packet Tracer</div>
@@ -147,28 +165,178 @@
   <div id="modal">
     <button id="modal-close" aria-label="Закрити">✕</button>
     <h3>Зворотній зв'язок</h3>
-    <form action="https://formspree.io/f/xbdppjyj" method="POST" id="contact-form">
-      <div class="form-group">
-        <label>Ім'я</label>
-        <input type="text" name="name" placeholder="Іван Петренко" required />
-      </div>
-      <div class="form-group">
-        <label>Email</label>
-        <input type="email" name="email" placeholder="ivan@example.com" required />
-      </div>
-      <div class="form-group">
-        <label>Телефон</label>
-        <input type="tel" name="phone" placeholder="+380 XX XXX XXXX" />
-      </div>
-      <div class="form-group">
-        <label>Повідомлення</label>
-        <textarea name="message" placeholder="Ваше повідомлення…" required></textarea>
-      </div>
+    <form action="https://formspree.io/f/mjgprwwv" method="POST" id="contact-form">
+      <div class="form-group"><label>Ім'я</label><input type="text" name="name" placeholder="Іван Петренко" required /></div>
+      <div class="form-group"><label>Email</label><input type="email" name="email" placeholder="ivan@example.com" required /></div>
+      <div class="form-group"><label>Телефон</label><input type="tel" name="phone" placeholder="+380 XX XXX XXXX" /></div>
+      <div class="form-group"><label>Повідомлення</label><textarea name="message" placeholder="Ваше повідомлення…" required></textarea></div>
       <button type="submit" class="btn-submit">Відправити</button>
     </form>
   </div>
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="script.js"></script>
+<script>
+// ============================================
+// 1. THREE.JS ФОН — ЗОРЯНЕ НЕБО
+// ============================================
+(function() {
+  var canvas = document.createElement('canvas');
+  canvas.id = 'bg-canvas';
+  document.body.insertBefore(canvas, document.body.firstChild);
+  var renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
+  renderer.setPixelRatio(window.devicePixelRatio);
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  var scene = new THREE.Scene();
+  var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+  camera.position.z = 5;
+  var sg = new THREE.BufferGeometry();
+  var sp = new Float32Array(2000 * 3);
+  for (var i = 0; i < sp.length; i++) sp[i] = (Math.random() - 0.5) * 200;
+  sg.setAttribute('position', new THREE.BufferAttribute(sp, 3));
+  var stars = new THREE.Points(sg, new THREE.PointsMaterial({ color: 0xffffff, size: 0.15, transparent: true, opacity: 0.7 }));
+  scene.add(stars);
+  var pg = new THREE.BufferGeometry();
+  var pp = new Float32Array(300 * 3), pc = new Float32Array(300 * 3);
+  for (var j = 0; j < 300; j++) {
+    pp[j*3]=(Math.random()-0.5)*100; pp[j*3+1]=(Math.random()-0.5)*100; pp[j*3+2]=(Math.random()-0.5)*50;
+    pc[j*3]=0.1+Math.random()*0.2; pc[j*3+1]=0.5+Math.random()*0.5; pc[j*3+2]=0.4+Math.random()*0.6;
+  }
+  pg.setAttribute('position', new THREE.BufferAttribute(pp, 3));
+  pg.setAttribute('color', new THREE.BufferAttribute(pc, 3));
+  var particles = new THREE.Points(pg, new THREE.PointsMaterial({ size: 0.3, vertexColors: true, transparent: true, opacity: 0.5 }));
+  scene.add(particles);
+  var mx = 0, my = 0;
+  document.addEventListener('mousemove', function(e) { mx=(e.clientX/window.innerWidth-0.5)*0.5; my=(e.clientY/window.innerHeight-0.5)*0.5; });
+  (function animate() {
+    requestAnimationFrame(animate);
+    stars.rotation.y += 0.0002; stars.rotation.x += 0.0001;
+    particles.rotation.y -= 0.0003;
+    camera.position.x += (mx - camera.position.x) * 0.02;
+    camera.position.y += (-my - camera.position.y) * 0.02;
+    camera.lookAt(scene.position);
+    renderer.render(scene, camera);
+  })();
+  window.addEventListener('resize', function() {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+  });
+})();
+
+// ============================================
+// 2. THREE.JS — 3D КУЛЯ
+// ============================================
+(function() {
+  var canvas = document.getElementById('sphere-canvas');
+  if (!canvas) return;
+  var renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
+  renderer.setSize(200, 200);
+  var scene = new THREE.Scene();
+  var camera = new THREE.PerspectiveCamera(60, 1, 0.1, 100);
+  camera.position.z = 3;
+  var geo = new THREE.BufferGeometry();
+  var pos = new Float32Array(1500*3), col = new Float32Array(1500*3);
+  for (var i = 0; i < 1500; i++) {
+    var theta = Math.random()*Math.PI*2, phi = Math.acos(2*Math.random()-1), r = 1+(Math.random()-0.5)*0.15;
+    pos[i*3]=r*Math.sin(phi)*Math.cos(theta); pos[i*3+1]=r*Math.sin(phi)*Math.sin(theta); pos[i*3+2]=r*Math.cos(phi);
+    col[i*3]=0.1+Math.random()*0.2; col[i*3+1]=0.6+Math.random()*0.4; col[i*3+2]=0.5+Math.random()*0.5;
+  }
+  geo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+  geo.setAttribute('color', new THREE.BufferAttribute(col, 3));
+  var sphere = new THREE.Points(geo, new THREE.PointsMaterial({ size: 0.04, vertexColors: true }));
+  scene.add(sphere);
+  (function animate() { requestAnimationFrame(animate); sphere.rotation.y+=0.008; sphere.rotation.x+=0.003; renderer.render(scene,camera); })();
+})();
+
+// ============================================
+// 3. ДРУКАРСЬКА МАШИНКА
+// ============================================
+(function() {
+  var el = document.getElementById('typewriter');
+  if (!el) return;
+  var texts = ['Junior System Administrator', 'Cybersecurity Specialist', 'Network Engineer'];
+  var ti = 0, ci = 0, deleting = false;
+  function tick() {
+    var cur = texts[ti];
+    el.textContent = deleting ? cur.substring(0, ci--) : cur.substring(0, ci++);
+    var delay = deleting ? 50 : 90;
+    if (!deleting && ci > cur.length) { delay = 1800; deleting = true; }
+    else if (deleting && ci < 0) { deleting = false; ti = (ti+1) % texts.length; ci = 0; delay = 400; }
+    setTimeout(tick, delay);
+  }
+  tick();
+})();
+
+// ============================================
+// 5. КУРСОР З ЧАСТИНКАМИ
+// ============================================
+(function() {
+  document.addEventListener('mousemove', function(e) {
+    var dot = document.createElement('div');
+    dot.className = 'cursor-dot';
+    dot.style.left = e.clientX + 'px';
+    dot.style.top = e.clientY + 'px';
+    document.body.appendChild(dot);
+    setTimeout(function() { dot.style.opacity='0'; dot.style.transform='scale(0) translate(-50%,-50%)'; }, 50);
+    setTimeout(function() { if(dot.parentNode) dot.parentNode.removeChild(dot); }, 400);
+  });
+})();
+
+// ============================================
+// 6. ГЛІТЧ ХЕДЕР — ПАРАЛАКС
+// ============================================
+(function() {
+  var hero = document.getElementById('hero');
+  window.addEventListener('scroll', function() {
+    var scrollY = window.scrollY;
+    if (hero) hero.style.backgroundPositionY = (scrollY * 0.4) + 'px';
+    // Паралакс для тексту
+    var heroInner = document.querySelector('.hero-inner');
+    if (heroInner) heroInner.style.transform = 'translateY(' + (scrollY * 0.3) + 'px)';
+  });
+})();
+
+// ============================================
+// 7. ЛІЧИЛЬНИКИ ЦИФР
+// ============================================
+(function() {
+  var counters = document.querySelectorAll('.stat-num');
+  var started = false;
+  function startCounters() {
+    if (started) return;
+    started = true;
+    counters.forEach(function(el) {
+      var target = parseInt(el.getAttribute('data-target'));
+      var current = 0;
+      var step = Math.max(1, Math.ceil(target / 40));
+      var timer = setInterval(function() {
+        current += step;
+        if (current >= target) { current = target; clearInterval(timer); }
+        el.textContent = current;
+      }, 40);
+    });
+  }
+  var heroObs = new IntersectionObserver(function(entries) {
+    if (entries[0].isIntersecting) startCounters();
+  }, { threshold: 0.5 });
+  var hero = document.getElementById('hero');
+  if (hero) heroObs.observe(hero);
+})();
+
+// ============================================
+// 9. ТАЙМЛАЙН — ПОЯВА ПРИ СКРОЛІ
+// ============================================
+(function() {
+  var items = document.querySelectorAll('.tl-animate');
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) { e.target.classList.add('tl-visible'); obs.unobserve(e.target); }
+    });
+  }, { threshold: 0.2 });
+  items.forEach(function(el) { obs.observe(el); });
+})();
+</script>
 </body>
 </html>
